@@ -1,0 +1,249 @@
+
+# ============================================================
+# INSURANCE FRAUD DETECTION SYSTEM (FDS V2)
+# Git Ignore Configuration
+# Purpose: Exclude temporary, sensitive, and generated files
+# ============================================================
+
+
+# ============================================================
+# 1. PYTHON VIRTUAL ENVIRONMENT
+# ============================================================
+
+# Virtual environment berisi package Python yang terinstal.
+# Tidak perlu disimpan di GitHub karena dapat dibuat ulang
+# menggunakan requirements.txt atau requirements-lock.txt.
+
+.venv/
+venv/
+env/
+ENV/
+
+
+# ============================================================
+# 2. PYTHON CACHE & COMPILED FILES
+# ============================================================
+
+# File cache dibuat otomatis ketika Python menjalankan kode.
+# Tidak diperlukan untuk menjalankan proyek dari source code.
+
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+
+# ============================================================
+# 3. OPERATING SYSTEM & EDITOR FILES
+# ============================================================
+
+# File otomatis dari macOS dan editor.
+# Tidak memiliki relevansi dengan machine learning pipeline.
+
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+
+
+# ============================================================
+# 4. JUPYTER NOTEBOOK
+# ============================================================
+
+# Checkpoint merupakan backup otomatis dari Jupyter.
+# Notebook utama (*.ipynb) tetap disimpan di GitHub
+# sebagai dokumentasi eksperimen.
+
+.ipynb_checkpoints/
+.profile_default/
+.jupyter/
+
+
+# ============================================================
+# 5. RAW DATASET
+# ============================================================
+
+# Dataset mentah tidak diunggah ke GitHub.
+# Dataset bisa berukuran besar atau mengandung data sensitif.
+#
+# File .gitkeep tetap disimpan agar struktur folder
+# data/raw muncul pada repository GitHub.
+
+data/raw/*
+!data/raw/.gitkeep
+
+
+# ============================================================
+# 6. PROCESSED DATASET
+# ============================================================
+
+# Data hasil cleaning, preprocessing, dan feature engineering
+# tidak dimasukkan ke GitHub.
+#
+# File dapat dihasilkan ulang melalui data pipeline.
+
+data/processed/*
+!data/processed/.gitkeep
+
+
+# ============================================================
+# 7. MLFLOW EXPERIMENT TRACKING
+# ============================================================
+
+# MLflow menyimpan experiment runs, parameters,
+# metrics, model artifacts, dan tracking database.
+#
+# File tersebut tidak diunggah melalui Git.
+# Hasil eksperimen penting akan didokumentasikan
+# dalam notebook atau laporan proyek.
+
+mlruns/
+mlartifacts/
+mlflow-artifacts/
+mlflow.db
+mlflow.db-*
+mlflow*.db
+mlflow*.db-*
+*.db-journal
+*.db-wal
+*.db-shm
+
+
+# ============================================================
+# 8. TRAINED MACHINE LEARNING MODELS
+# ============================================================
+
+# Model yang telah dilatih tidak dimasukkan ke GitHub.
+#
+# Model dapat disimpan dan dilacak melalui MLflow.
+# Kode training tetap disimpan agar model dapat dibuat ulang.
+
+models/*
+!models/.gitkeep
+
+*.pkl
+*.pickle
+*.joblib
+*.onnx
+
+
+# ============================================================
+# 9. GENERATED REPORTS & VISUALIZATIONS
+# ============================================================
+
+# Output analisis yang dihasilkan otomatis.
+# Laporan final tertentu dapat disimpan secara terpisah
+# apabila memang diperlukan untuk dokumentasi akademik.
+
+reports/*
+!reports/.gitkeep
+
+outputs/
+artifacts/
+
+
+# ============================================================
+# 10. STREAMLIT APPLICATION
+# ============================================================
+
+# Secrets berisi informasi konfigurasi sensitif
+# seperti API keys, tokens, dan credentials.
+#
+# File konfigurasi Streamlit yang tidak sensitif,
+# seperti config.toml, tetap dapat disimpan di GitHub.
+
+.streamlit/secrets.toml
+.streamlit/secrets.*.toml
+
+
+# ============================================================
+# 11. ENVIRONMENT VARIABLES & CREDENTIALS
+# ============================================================
+
+# Melindungi konfigurasi rahasia seperti password,
+# API keys, database credentials, dan access tokens.
+#
+# File .env.example tetap dapat digunakan sebagai template
+# selama tidak berisi credential sebenarnya.
+
+.env
+.env.*
+!.env.example
+
+*.pem
+*.key
+credentials.json
+service-account.json
+
+
+# ============================================================
+# 12. TESTING & CODE COVERAGE
+# ============================================================
+
+# File laporan pengujian yang dihasilkan secara otomatis.
+# File kode pengujian dalam folder tests/ tetap disimpan.
+
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+test-results/
+.tox/
+.nox/
+
+
+# ============================================================
+# 13. BUILD & DISTRIBUTION
+# ============================================================
+
+# File hasil packaging atau proses build Python.
+# Tidak diperlukan dalam source repository.
+
+build/
+dist/
+*.egg-info/
+.eggs/
+
+
+# ============================================================
+# 14. TEMPORARY FILES & LOGS
+# ============================================================
+
+# File sementara, backup, dan application logs
+# yang tidak diperlukan untuk version control.
+
+*.log
+*.tmp
+*.temp
+*.bak
+*.backup
+*~
+tmp/
+temp/
+
+
+# ============================================================
+# 15. IMPORTANT FILES TO KEEP IN GITHUB
+# ============================================================
+
+# File berikut TIDAK di-ignore:
+#
+# requirements.txt
+# requirements-lock.txt
+# pyproject.toml
+# README.md
+# .gitignore
+#
+# notebooks/*.ipynb
+# src/fds/*.py
+# app/*.py
+# tests/*.py
+#
+# File-file ini menjadi dasar reproduksi proyek.
+# ============================================================
+

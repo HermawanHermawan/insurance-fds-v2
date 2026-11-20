@@ -1,0 +1,141 @@
+
+# ============================================================
+# INSURANCE FRAUD DETECTION SYSTEM (FDS V2)
+# Python Version: 3.12
+# Purpose: End-to-End Machine Learning Development
+# ============================================================
+
+
+# ============================================================
+# 1. DATA MANIPULATION & NUMERICAL COMPUTATION
+# ============================================================
+
+# NumPy
+# Digunakan untuk operasi matematika, array, dan perhitungan
+# numerik yang mendukung proses machine learning.
+numpy>=1.26,<3
+
+# Pandas
+# Digunakan untuk membaca dataset CSV, membersihkan data,
+# mengolah DataFrame, dan melakukan data analysis.
+pandas>=2.2,<3
+
+# SciPy
+# Digunakan untuk operasi statistik dan komputasi ilmiah.
+# Mendukung beberapa algoritma machine learning.
+scipy>=1.13,<2
+
+
+# ============================================================
+# 2. MACHINE LEARNING
+# ============================================================
+
+# Scikit-learn
+# Digunakan untuk membangun model machine learning,
+# melakukan train-test split, preprocessing, feature encoding,
+# model training, hyperparameter tuning, dan evaluation.
+#
+# Contoh algoritma:
+# - Logistic Regression
+# - Random Forest
+# - Decision Tree
+# - Gradient Boosting
+scikit-learn>=1.5,<2
+
+
+# ============================================================
+# 3. DATA VISUALIZATION & EXPLORATORY DATA ANALYSIS
+# ============================================================
+
+# Matplotlib
+# Digunakan untuk membuat grafik seperti histogram,
+# bar chart, scatter plot, dan confusion matrix.
+matplotlib>=3.9,<4
+
+# Seaborn
+# Digunakan untuk visualisasi statistik yang lebih informatif,
+# seperti correlation heatmap, boxplot, dan countplot.
+seaborn>=0.13,<1
+
+
+# ============================================================
+# 4. JUPYTER NOTEBOOK & EXPERIMENT DOCUMENTATION
+# ============================================================
+
+# JupyterLab
+# Digunakan sebagai lingkungan interaktif untuk menulis,
+# menjalankan, dan mendokumentasikan eksperimen Python.
+#
+# Setiap tahap data science akan dicatat dalam notebook.
+jupyterlab>=4.2,<5
+
+# IPython Kernel
+# Menghubungkan virtual environment Python dengan Jupyter.
+# Memastikan notebook menggunakan environment FDS V2.
+ipykernel>=6.29,<8
+
+
+# ============================================================
+# 5. MACHINE LEARNING EXPERIMENT TRACKING
+# ============================================================
+
+# MLflow
+# Digunakan untuk mencatat dan membandingkan eksperimen ML.
+#
+# Informasi yang disimpan:
+# - Model parameters
+# - Evaluation metrics
+# - Experiment runs
+# - Model artifacts
+# - Model versions
+#
+# Membantu menentukan champion model berdasarkan hasil
+# evaluasi yang terdokumentasi.
+mlflow>=2.20,<4
+
+
+# ============================================================
+# 6. MACHINE LEARNING APPLICATION
+# ============================================================
+
+# Streamlit
+# Digunakan untuk membuat aplikasi web interaktif
+# tanpa perlu membangun frontend secara manual.
+#
+# Fitur aplikasi FDS:
+# - Input klaim asuransi
+# - Fraud prediction
+# - Fraud probability
+# - Bulk CSV prediction
+# - Visualization dashboard
+streamlit>=1.40,<2
+
+
+# ============================================================
+# 7. MODEL SERIALIZATION
+# ============================================================
+
+# Joblib
+# Digunakan untuk menyimpan dan memuat kembali model
+# machine learning beserta preprocessing pipeline.
+#
+# Model tidak perlu dilatih ulang setiap kali
+# aplikasi Streamlit dijalankan.
+joblib>=1.4,<2
+
+
+# ============================================================
+# 8. AUTOMATED TESTING & QUALITY ASSURANCE
+# ============================================================
+
+# Pytest
+# Digunakan untuk membuat dan menjalankan automated tests.
+#
+# Contoh pengujian:
+# - Dataset berhasil dibaca
+# - Preprocessing berjalan
+# - Model dapat menghasilkan prediksi
+# - Input tidak valid ditolak
+# - Bulk prediction sesuai format
+pytest>=8,<10
+
